@@ -1,24 +1,24 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { useDispatch } from "react-redux";
-import { addNowPlayingMovies } from "../utils/movieSlice";
+import { addTopRatedMovies } from "../utils/movieSlice";
 
-const useNowPlayingMovies = () => {
+const useTopRatedMovies = () => {
   // Fetch the now playing movies from the API and dispatch the action to add them to the store
   const dispatch = useDispatch();
-  const getNowPlayingMovies = async () => {
+  const getTopRatedMovies = async () => {
     const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+      "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
       API_OPTIONS
     );
 
     const json = await data.json();
 
-    dispatch(addNowPlayingMovies(json.results));
+    dispatch(addTopRatedMovies(json.results));
   };
   useEffect(() => {
-    getNowPlayingMovies();
+    getTopRatedMovies();
   }, []);
 };
 
-export default useNowPlayingMovies;
+export default useTopRatedMovies;
