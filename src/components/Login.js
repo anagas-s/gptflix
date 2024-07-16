@@ -62,7 +62,6 @@ const Login = () => {
               // An error occurred
               // ...
             });
-          console.log(user);
 
           // ...
         })
