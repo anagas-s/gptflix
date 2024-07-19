@@ -8,7 +8,7 @@ const GptSearch = () => {
     <div>
       <div>
         <img
-          className="absolute -z-10 opacity-80"
+          className="fixed -z-10 opacity-90"
           alt="netflix-bg"
           src={NETFLIX_BG_URL}
         />
