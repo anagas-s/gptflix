@@ -13,9 +13,7 @@ const GptSearchBar = () => {
 
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/search/movie?query=" +
-        movie +
-        "&include_adult=false&language=en-US&page=1",
+      `https://express-vercel-xajo.vercel.app/proxy/search/movie?query=${movie}`,
       API_OPTIONS
     );
     const json = await data.json();
