@@ -11,7 +11,7 @@ const useNowPlayingMovies = () => {
   );
   const getNowPlayingMovies = async () => {
     const data = await fetch(
-      "https://express-vercel-xi-gules.vercel.app/proxy",
+      "https://express-vercel-xajo.vercel.app/proxy",
       API_OPTIONS
     );
 
