@@ -14,10 +14,11 @@ const firebaseConfig = {
   storageBucket: "gptflix-fe7ad.appspot.com",
   messagingSenderId: "192678646217",
   appId: "1:192678646217:web:9034c63af9f4b610dd9818",
-  measurementId: "G-CBJ456BJEC"
+  measurementId: "G-CBJ456BJEC",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 export const auth = getAuth();

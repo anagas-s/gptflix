@@ -80,8 +80,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
-
+          // const user = userCredential.user;
           // ...
         })
         .catch((error) => {
@@ -101,7 +100,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          className="h-screen object-cover"
+          className="w-screen h-screen object-cover"
           alt="netflix-bg"
           src={NETFLIX_BG_URL}
         />
