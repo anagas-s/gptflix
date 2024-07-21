@@ -8,7 +8,7 @@ const useMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
   const getMovieVideos = async () => {
     const data = await fetch(
-      `https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`,
+      `https://express-vercel-xajo.vercel.app/proxy/${movieId}/videos`,
       API_OPTIONS
     );
     const json = await data.json();

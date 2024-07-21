@@ -8,7 +8,7 @@ const useUpcomingMovies = () => {
   const dispatch = useDispatch();
   const getUpcomingMovies = async () => {
     const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
+      "https://express-vercel-xajo.vercel.app/proxy/upcoming",
       API_OPTIONS
     );
 
